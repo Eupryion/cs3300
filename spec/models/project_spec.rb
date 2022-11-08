@@ -30,5 +30,15 @@ RSpec.describe Project, type: :model do
     it "should return all projects" do
       expect(Project.count).to eq(3)
     end
+
+    it "should delete all projects" do
+      Project.delete(1)
+      Project.delete(1)
+      Project.delete(1)
+    end
+
+    it "should return no projects" do
+      expect(Project.count).to eq(3)
+    end
   end
 end

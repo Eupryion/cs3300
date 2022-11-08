@@ -50,7 +50,12 @@ RSpec.feature "Projects", type: :feature do
     before(:each) do
       visit projects_path
     end
-    
+
+    scenario "new project" do
+      click_link "New project"
+      expect(page).to have_content("New project")
+    end
+
     scenario "back project" do
       click_link "Show this project"
       click_link "Back to projects"

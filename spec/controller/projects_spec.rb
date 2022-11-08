@@ -17,5 +17,13 @@ RSpec.describe ProjectsController, type: :controller do
       expect(response).to be_successful
     end
   end
+
+  context "DELETE FROM" do
+    let!(:project) { Project.create(title: "Test title", description: "Test description") }
+    it "returns a success response" do
+      delete :destory, params: { id: project }
+      expect(response).to be_successful
+    end
+  end
 end
 
