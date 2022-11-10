@@ -1,6 +1,6 @@
 module ApplicationHelper
     def page_title
-      true
+      "Tom is your friend"
     end
   end
   

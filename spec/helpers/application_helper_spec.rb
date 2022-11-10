@@ -1,9 +1,9 @@
 require "rails_helper"
 
-describe ApplicationHelper do
+RSpec.describe ApplicationHelper, :type => :helper do
   describe "#page_title" do
-    it "returns true" do
-      helper.page_title.should be(true)
+    it "returns the default title" do
+      expect(helper.page_title).to eq("Tom is your friend")
     end
   end
 end
