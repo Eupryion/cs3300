@@ -1,2 +1,6 @@
 module ApplicationHelper
-end
+    def page_title
+      true
+    end
+  end
+  
