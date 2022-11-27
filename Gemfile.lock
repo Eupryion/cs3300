@@ -264,7 +264,7 @@ DEPENDENCIES
   capybara
   debug
   devise
-  factory_bot_rails
+  factory_bot_rails (~> 6.2.0)
   importmap-rails
   jbuilder
   pg
