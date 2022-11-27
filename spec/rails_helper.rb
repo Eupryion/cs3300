@@ -60,6 +60,16 @@ RSpec.configure do |config|
   config.filter_rails_from_backtrace!
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
+  config.include Warden::Test:Helpers
+  config.include Devise::Test:ControllerHelpers, :type => :controller
+  config.include Devise::Test:IntegrationHelpers, :type => :feature
+  config.include FactoryBot::Syntax::Methods
+  config.extend ControllerMacros, :type => :controller
+  config.extend ControllerMacros, :type => :feature
+
+  config.after :each do
+    Warden.test_reset!
+  end
 end
 
 #Added per Tom's Tutorial

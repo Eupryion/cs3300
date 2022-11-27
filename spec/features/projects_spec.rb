@@ -2,8 +2,11 @@
 require 'rails_helper'
 
 RSpec.feature "Projects", type: :feature do
+  user = FactoryBot.create
   context "Create new project" do
     before(:each) do
+      Warden.test_mode!
+      login_as(user, :scope => :user)
       visit new_project_path
       within("form") do
         fill_in "Title", with: "Test title"

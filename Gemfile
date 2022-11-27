@@ -5,6 +5,9 @@ ruby "3.0.2" #changed from 2.7.5
 
 gem 'devise' #added for iteration 5
 
+gem 'bootstrap', '~> 5.2.3' #iteration 6
+gem 'jquery-rails' #I6
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.4"
 
@@ -81,4 +84,5 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
   gem 'simplecov', require: false
+  gem 'warden-rspec-rails'
 end

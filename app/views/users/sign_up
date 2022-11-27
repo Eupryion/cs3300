@@ -1,0 +1,110 @@
+<html><head><style type="text/css">.turbolinks-progress-bar {
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: #0076ff;
+    z-index: 9999;
+    transition: width 300ms ease-out, opacity 150ms 150ms ease-in;
+    transform: translate3d(0, 0, 0);
+  }</style>
+  
+      <link rel="stylesheet" media="all" href="/assets/application-21638583d199a16626bc79519b2c70d61b0cc027d8f28db4493b782e55308358.css" data-turbolinks-track="reload">
+      <script src="/assets/application-166d59353d0f5b8dd0c936a6784c1c0f8b10087105143cca4b1214c67cbc33d2.js" data-turbolinks-track="reload"></script>
+    <title>CS3300</title><meta name="csrf-param" content="authenticity_token"><meta name="csrf-token" content="zREZFSH0ERcUdMrEh3D7eV8IpTQezV36VUiED8WIewx8Us7xL3lHkwkByEYJyhZLIpR74w7V45DQuGb24dk8-g">
+</head>
+  
+<body>
+    <meta name="csrf-param" content="authenticity_token">
+    <meta name="csrf-token" content="JddAfP_sAceovDPiXgTyFVhAYYroLy_PTClXVtdcj8eUlJeY8WFXQ7XJMWDQvh8nJdy_Xfg3kaXJ2bWv8w3IMQ">
+    <link rel="stylesheet" media="screen" href="/assets/bootstrap-d237ee601c53214e24cba4176f134af8037e997882c1cedfe89dfd2d012464b6.css">
+    <link rel="stylesheet" media="screen" href="/assets/login-3377b08d50d65e7f4edcd1ae32866f7ab9830eb6b8702dadf6aaa88338bdce4d.css">
+    <script src="/assets/jquery-3.6.0.slim.min-8315b691d23306a1f3cb2709eeb9d3517ba8c546c3a1a7cce8c293375f11a191.js"></script>
+    <script src="/assets/bootstrap-25ccac440eae2a70d2ae9033251ff3c9a3f2ca8992db7669e7f31bfd510e6ad8.js"></script>
+  
+  <style>
+  body {background-color: lightgrey;}
+  </style>
+  
+  <div class="collapse bg-dark" id="navbarToggleExternalContent">
+  <div class="d-none d-md-block container-fluid">
+      <div class="row">
+          <div class="col-2 col-sm-2 col-md-2"></div>
+          <div class="col-4 col-sm-4 col-md-4" style="line-height: 1em;">
+          <h4 class="text-white">About</h4>
+          <p.not() class="text-muted" style="font-size:11px;">I am a junior at The University of Colorado In Colorado Springs. I expect to graduate in December of 2023 with a B.S. in Computer Science. This portfolio highlights many of the projects I have completed throughout the years.<p></p>
+          </p.not()></div>
+          <div class="col-2 col-sm-2 col-md-2"></div>
+          <div class="col-4 col-sm-4 col-md-4">
+              <h4 class="text-white">Contact</h4>
+              <ul class="list-unstyled">
+                  <li><a href="https://github.com/Eupryion/" class="text-white">Checkout my Github</a></li>
+                  <li class="text-white">Email: amccamen@uccs.edu</li>
+              </ul>
+          </div>
+      </div>
+  </div>
+  </div>
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+  <a class="navbar-brand" href="/">Aaron's Portofolio Site</a>
+  
+  
+  <div class="collapse navbar-collapse" id="navbarsDefault">
+  <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+          <a class="nav-link" href="/" style="font-size:18px;">Home</a>
+      </li>
+                  <li class="nav-item" style="font-size:18px;">
+                      <a class="nav-link" href="users/sign_in">Sign In</a>
+                  </li>
+                  <li class="nav-item" style="font-size:18px;">
+                      <a class="nav-link" href="users/sign_up">Sign Up</a>
+                  </li>
+  </ul>
+  
+  
+      <div class="navbar navbar-dark bg-dark box-shadow">
+          <div class="d-flex justify-content-between">
+              <button class="d-none d-md-block navbar-toggler" href="#collapse1" type="button" data-target="#navbarToggleExternalContent" data-toggle="collapse" aria-controls="navbarHeader" aria-expanded="true" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+          </div>
+      </div>
+  </div>
+  </nav>
+  
+  
+  
+  <div class="wrapper fadeInDown">
+      <div id="formContent">
+        <!-- Tabs Titles -->
+    
+        <!-- Icon -->
+        <div class="fadeIn first">
+          <h3>Sign Up</h3>
+        </div>
+        <div class="alert">
+        </div>
+        <form class="new_user" id="new_user" action="/auth/register" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="krhUM8eah_2QVNAdmqxzbqL92-n1GnS_8P2mO32-9liBMbTB_j2hSkkRx94ohEKH7dKN6CFC_dnQT21lkm8c5Q">
+              
+                <input autocomplete="off" autofocus="autofocus" placeholder="Email" id="login" class="fadeIn second inputForm" type="email" value="" name="user[email]">
+                
+                <input placeholder="Password" id="password" class="fadeIn second inputForm" type="password" name="user[password]">
+                <br>
+                <em>(6 characters minimum)</em>
+                <input placeholder="Confirm Password" id="password" class="fadeIn second inputForm" type="password" name="user[password_confirmation]">
+  
+                <br>
+              <div class="actions">
+              <input type="submit" name="commit" value="Sign Up" class="fadeIn fourth" style="font-size:15px" data-disable-with="Sign Up">
+              </div>
+        </form>
+            <!-- Remind Passowrd -->
+            <a class="underlineHover" href="/auth/secret/new">Forgot Password?</a>
+            <br>
+            <a class="underlineHover" href="/auth/login">Sign In</a>  
+        </div>
+    </div>
+    
+  </body></html>
