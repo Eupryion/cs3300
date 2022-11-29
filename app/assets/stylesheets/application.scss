@@ -13,4 +13,11 @@
  *= require_tree .
  *= require_self
  */
+ @import "bootstrap/functions";
+ @import "bootstrap/variables";
+ 
+ $theme-colors: (
+   "primary": $blue-900
+ );  
+ 
  @import "bootstrap";

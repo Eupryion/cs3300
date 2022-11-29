@@ -15,7 +15,7 @@
 </head>
 <body>
 
-<div class="p-5 bg-primary text-white text-center">
+<div class="p-5 bg-secondary text-white text-center">
   <h1>My Portfolio Page</h1>
   <p>Welcome to my I&#128150;Me page</p> 
 </div>
@@ -24,7 +24,7 @@
   <div class="container-fluid">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link index" href="/projects/index">Home</a>
+        <a class="nav-link index" href="/projects">Home</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/users/sign_in">Sign In</a>
@@ -43,13 +43,14 @@
   <div class="row">
     <div class="col-sm-4">
       <h2>About Me</h2>
-      <div class="fakeimg">Fake Image</div>
-      <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+      <!--div class="fakeimg">Fake Image</div-->
+      <%= image_tag "lincoln.png", height: 300 %>
+      <p>Hello world! I am a Junior at The University of Colorado In Colorado Springs. I expect to graduate in December of 2023 with a B.S. in Computer Science. This portfolio highlights many of the projects I have completed throughout my education.</p>
       <h3 class="mt-4">Other links</h3>
       <p>Learn more about me. Or don't.</p>
       <ul class="nav nav-pills flex-column">
         <li class="nav-item">
-          <a class="nav-link active" href="https://github.com/Eupryion/">More of me on GitHub</a>
+          <a class="nav-link active bg-dark" href="https://github.com/Eupryion/" target="_blank">More of me on GitHub</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="mailto: amccamen@uccs.edu">Email: amccamen@uccs.edu</a>
@@ -58,29 +59,26 @@
           <a class="nav-link" href="tel:5555555555">Phone: 555-555-5555</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" href="#">Disabled</a>
+          <a class="nav-link" href="https://www.linkedin.com/in/aaron-mccament-42574188/" target="_blank">LinkedIn: Aaron McCament</a>
         </li>
       </ul>
       <hr class="d-sm-none">
     </div>
     <div class="col-sm-8">
-      <h2>TITLE HEADING</h2>
-      <h5>Title description, Dec 7, 2020</h5>
-      <div class="fakeimg">Fake Image</div>
-      <p>Some text..</p>
-      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-
-      <h2 class="mt-5">TITLE HEADING</h2>
-      <h5>Title description, Sep 2, 2020</h5>
-      <div class="fakeimg">Fake Image</div>
-      <p>Some text..</p>
-      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+      <h1>Projects</h1>
+      <div id="projects">
+        <% @projects.each do |project| %>
+        <%= render project %>
+        <p><%= link_to "Show this project", project %></p>
+        <% end %>
+      </div>
+      <%= link_to "New project", new_project_path %>
     </div>
   </div>
 </div>
 
 <div class="mt-5 p-4 bg-dark text-white text-center">
-  <p>Footer</p>
+  <p>Aaron McCament | Portfolio | University of Colorado at Colorado Springs</p>
 </div>
 
 </body>
