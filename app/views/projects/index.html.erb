@@ -43,11 +43,10 @@
   <div class="row">
     <div class="col-sm-4">
       <h2>About Me</h2>
-      <!--div class="fakeimg">Fake Image</div-->
       <%= image_tag "lincoln.png", height: 300 %>
       <p>Hello world! I am a Junior at The University of Colorado In Colorado Springs. I expect to graduate in December of 2023 with a B.S. in Computer Science. This portfolio highlights many of the projects I have completed throughout my education.</p>
       <h3 class="mt-4">Other links</h3>
-      <p>Learn more about me. Or don't.</p>
+      <p>Learn more about me. Or not.</p>
       <ul class="nav nav-pills flex-column">
         <li class="nav-item">
           <a class="nav-link active bg-dark" href="https://github.com/Eupryion/" target="_blank">More of me on GitHub</a>
@@ -59,20 +58,30 @@
           <a class="nav-link" href="tel:5555555555">Phone: 555-555-5555</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="https://www.linkedin.com/in/aaron-mccament-42574188/" target="_blank">LinkedIn: Aaron McCament</a>
+          <a class="nav-link " href="https://www.linkedin.com/in/aaron-mccament-42574188/" target="_blank">LinkedIn: Aaron McCament</a>
         </li>
       </ul>
       <hr class="d-sm-none">
     </div>
     <div class="col-sm-8">
       <h1>Projects</h1>
+      <a class="btn btn-primary" href="<%= new_project_path %>">New Project</a>
       <div id="projects">
         <% @projects.each do |project| %>
-        <%= render project %>
+          <div id="<%= dom_id project %>">
+          <h2>
+            <strong>Title:</strong>
+            <%= project.title %>
+          </h2>
+        
+          <p>
+            <strong>Description:<br></strong>
+            <%= project.description[0,200] %>...
+          </p>
+        </div>
         <p><%= link_to "Show this project", project %></p>
         <% end %>
       </div>
-      <%= link_to "New project", new_project_path %>
     </div>
   </div>
 </div>

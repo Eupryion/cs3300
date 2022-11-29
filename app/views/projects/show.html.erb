@@ -34,14 +34,14 @@
 
 <div class="container mt-5">
   <div class="row">
-    <div class="col-sm-4">
+    <div class="col-xxl-12">
     <p style="color: green"><%= notice %></p>
 
     <%= render @project %>
     
     <ul class="nav">
     <li class="nav-item"><a class="nav-link" href="<%= edit_project_path(@project) %>">Edit this Project</a></li>
-    <li class="nav-item"><a class="nav-link" href="#">Back to Project Page</a></li>
+    <li class="nav-item"><a class="nav-link" href="/projects">Back to Home Page</a></li>
     <li class="nav-item bg-warn"><a class="nav-link" href="@project, method: :delete">Delete this Project</a></li>
     </ul>
     
