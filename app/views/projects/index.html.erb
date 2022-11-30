@@ -16,7 +16,7 @@
 <body>
 
 <div class="p-5 bg-secondary text-white text-center">
-  <h1>My Portfolio Page</h1>
+  <h1>Aaron McCament's Portfolio</h1>
   <p>Welcome to my I&#128150;Me page</p> 
 </div>
 
@@ -26,22 +26,19 @@
       <li class="nav-item">
         <a class="nav-link index" href="/projects">Home</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/users/sign_in">Sign In</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/users/sign_up">Sign Up</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Sign Out</a>
-      </li>
+      <% if user_signed_in? %>
+      <li class="nav-item">     <%= button_to "logout", destroy_user_session_path, method: :delete, class: 'btn btn-primary'  %>      </li>
+      <% else %>
+      <li class="nav-item">        <a class="nav-link" href="/users/sign_in">Sign In</a>      </li>
+      <li class="nav-item">        <a class="nav-link" href="/users/sign_up">Sign Up</a>      </li>
+      <% end # if user is signed it %>
     </ul>
   </div>
 </nav>
 
 <div class="container mt-5">
   <div class="row">
-    <div class="col-sm-4">
+    <div class="col-lg-4">
       <h2>About Me</h2>
       <%= image_tag "lincoln.png", height: 300 %>
       <p>Hello world! I am a Junior at The University of Colorado In Colorado Springs. I expect to graduate in December of 2023 with a B.S. in Computer Science. This portfolio highlights many of the projects I have completed throughout my education.</p>
@@ -66,6 +63,7 @@
     <div class="col-sm-8">
       <h1>Projects</h1>
       <a class="btn btn-primary" href="<%= new_project_path %>">New Project</a>
+      <a class="btn btn-primary" href="#bottom">Scroll to Bottom</a>
       <div id="projects">
         <% @projects.each do |project| %>
           <div id="<%= dom_id project %>">
@@ -87,6 +85,7 @@
 </div>
 
 <div class="mt-5 p-4 bg-dark text-white text-center">
+  <a id="bottom"></a>
   <p>Aaron McCament | Portfolio | University of Colorado at Colorado Springs</p>
 </div>
 

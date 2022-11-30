@@ -1,31 +1,10 @@
-<html><head><style type="text/css">.turbolinks-progress-bar {
-    position: fixed;
-    display: block;
-    top: 0;
-    left: 0;
-    height: 3px;
-    background: #0076ff;
-    z-index: 9999;
-    transition: width 300ms ease-out, opacity 150ms 150ms ease-in;
-    transform: translate3d(0, 0, 0);
-  }</style>
-  
-      <link rel="stylesheet" media="all" href="/assets/application-21638583d199a16626bc79519b2c70d61b0cc027d8f28db4493b782e55308358.css" data-turbolinks-track="reload">
-      <script src="/assets/application-166d59353d0f5b8dd0c936a6784c1c0f8b10087105143cca4b1214c67cbc33d2.js" data-turbolinks-track="reload"></script>
-    <title>CS3300</title><meta name="csrf-param" content="authenticity_token"><meta name="csrf-token" content="zREZFSH0ERcUdMrEh3D7eV8IpTQezV36VUiED8WIewx8Us7xL3lHkwkByEYJyhZLIpR74w7V45DQuGb24dk8-g">
+<html><head>
+    <title>CS3300</title>
 </head>
   
 <body>
-    <meta name="csrf-param" content="authenticity_token">
-    <meta name="csrf-token" content="JddAfP_sAceovDPiXgTyFVhAYYroLy_PTClXVtdcj8eUlJeY8WFXQ7XJMWDQvh8nJdy_Xfg3kaXJ2bWv8w3IMQ">
     <link rel="stylesheet" media="screen" href="/assets/bootstrap-d237ee601c53214e24cba4176f134af8037e997882c1cedfe89dfd2d012464b6.css">
     <link rel="stylesheet" media="screen" href="/assets/login-3377b08d50d65e7f4edcd1ae32866f7ab9830eb6b8702dadf6aaa88338bdce4d.css">
-    <script src="/assets/jquery-3.6.0.slim.min-8315b691d23306a1f3cb2709eeb9d3517ba8c546c3a1a7cce8c293375f11a191.js"></script>
-    <script src="/assets/bootstrap-25ccac440eae2a70d2ae9033251ff3c9a3f2ca8992db7669e7f31bfd510e6ad8.js"></script>
-  
-  <style>
-  body {background-color: lightgrey;}
-  </style>
   
   <div class="collapse bg-dark" id="navbarToggleExternalContent">
   <div class="d-none d-md-block container-fluid">

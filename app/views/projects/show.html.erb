@@ -22,9 +22,6 @@
       <li class="nav-item">
         <a class="nav-link index" href="/projects">Home</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Sign Out</a>
-      </li>
     </ul>
   </div>
 </nav>
@@ -35,13 +32,16 @@
     <p style="color: green"><%= notice %></p>
 
     <%= render @project %>
-    
     <ul class="nav">
+    <% if user_signed_in? %>
     <li class="nav-item"><a class="nav-link" href="<%= edit_project_path(@project) %>">Edit this Project</a></li>
     <li class="nav-item"><a class="nav-link" href="/projects">Back to Home Page</a></li>
-    <li class="nav-item bg-warn"><a class="nav-link" href="@project, method: :delete">Delete this Project</a></li>
     </ul>
-    
+    <%= button_to "Destroy this project", @project, method: :delete %>
+    <% else %>
+    <li class="nav-item"><a class="nav-link" href="/projects">Back to Home Page</a></li>
+    </ul>
+    <% end # if user is signed it %>
     </div>
   </div>
 </div>
