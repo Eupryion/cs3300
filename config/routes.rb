@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, :controllers => {:registrations => "registrations"}
   #root "projects#index"
   root to: "projects#index" #added per iteration 5
   resources :projects, :users
